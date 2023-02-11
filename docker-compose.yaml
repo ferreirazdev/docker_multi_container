@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  mongodb:
+    image: mongo
+    volumes:
+      - mongodbdata:/data/db
+    env_file:
+      - ./env/mongo.env
+    container_name: mongodb
+volumes:
+  mongodbdata:
